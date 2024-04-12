@@ -30,7 +30,8 @@ export const buildHtml = () => {
 
 export const buildJs = (done) => {
 	gulp.src([
-		'src/js/vendor/*.js'
+		'src/js/vendor/*.js',
+		'node_modules/typed.js/dist/typed.umd.js',
 	])
 		.pipe(plumber())
 		.pipe(uglify())

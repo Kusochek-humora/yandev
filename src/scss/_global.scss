@@ -156,7 +156,7 @@ body {
 }
 body {
     font-family: "Helvetica", serif;
-    &.menu-active{
+    &.menu-active {
         overflow: hidden;
     }
 }
@@ -223,7 +223,9 @@ input {
 .footer {
     flex: 0 0 auto;
 }
-
+section {
+    border-bottom: 1px solid #3b3b3b;
+}
 .container {
     max-width: 1190px;
     width: 100%;
@@ -274,7 +276,7 @@ input {
 }
 .button {
     display: inline-flex;
-    padding: 18px 20px;
+    padding: 20px 22px;
     background-color: $white;
     transition: 0.3s all;
     span {
@@ -315,6 +317,7 @@ input {
         }
     }
     &.border {
+        padding: 18px 20px;
         svg > path {
             fill: $white;
         }

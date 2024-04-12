@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
     menuCloseBtn.addEventListener('click', closeMenuHandler);
     menuOpenBtn.addEventListener('click', openMenuHandler);
 
+
+    const options = {
+        strings: ['web-designer','front-end developer'],
+        typeSpeed: 100,       // Установите желаемую скорость набора символов
+        backSpeed: 75,       // Скорость стирания текста
+        startDelay: 75,     // Задержка перед началом анимации
+
+        loop: true,// Повторять анимацию
+        // startDelay: 1,
+    };
+    const typed = new Typed('#typed', options);
 })
 
 
