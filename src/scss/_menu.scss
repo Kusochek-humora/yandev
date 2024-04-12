@@ -1,0 +1,96 @@
+.menu {
+    display: none;
+    position: fixed;
+    height: 100%;
+    background-color: #1f1f1f;
+    padding: 60px 30px;
+    max-width: 354px;
+    width: 100%;
+    right: 0;
+    transition: 0.3s all;
+    transform: translateX(100%);
+    z-index: 22;
+    flex-direction: column;
+    gap: 100px 0;
+    &.active {
+        transform: translateX(0);
+    }
+    &__nav {
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px 0;
+    }
+
+    &__list-item {
+        padding: 8px;
+        transition: 0.3s all;
+        background-color: transparent;
+        &:hover {
+            background-color: $red;
+        }
+    }
+
+    &__list-link {
+        font-size: 32px;
+        color: $white;
+        transition: 0.3s all;
+    }
+
+    &__social {
+        display: flex;
+        justify-content: center;
+        gap: 0 30px;
+    }
+
+    // &__social-item {
+    // }
+
+    &__social-link {
+        transition: 0.3s all;
+        svg,
+        path {
+            transition: 0.3s all;
+        }
+        &:hover {
+            path {
+                fill: $red;
+            }
+        }
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__burger {
+        width: 50px;
+        height: 50px;
+        &:hover {
+            svg,
+            path {
+                fill: $red;
+            }
+        }
+        svg,
+        path {
+            transition: 0.3s all;
+        }
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        display: flex;
+    }
+}

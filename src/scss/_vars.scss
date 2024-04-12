@@ -1,0 +1,17 @@
+@mixin font($a, $b) {
+    font-size: $a;
+    line-height: $b;
+    // font-weight: $c;
+    // color: $d;
+}
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+$black: #1F1F1F;
+$white: #fff;
+$red: #cc0000;
+$black-border:#3B3B3B;
+$grey:#7B7B7B;

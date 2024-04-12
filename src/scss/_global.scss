@@ -1,0 +1,331 @@
+html {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: $black;
+    scroll-behavior: smooth;
+    position: relative;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    transition: 0.3s all;
+    &.active {
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 21;
+        pointer-events: all;
+    }
+}
+body {
+    font-family: "Helvetica", serif;
+    &.menu-active{
+        overflow: hidden;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: 400;
+}
+form {
+    margin: 0;
+}
+fieldset {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+address {
+    font-style: inherit;
+}
+p {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+input {
+    border: inherit;
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+.container {
+    max-width: 1190px;
+    width: 100%;
+    padding: 0 40px 0;
+    margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+        padding: 0 30px 0;
+    }
+    // @media screen and (max-width:768px) {
+    //     padding: 0 30px 0;
+    // }
+    @media screen and (max-width: 480px) {
+        padding: 0 20px 0;
+    }
+    @media screen and (max-width: 360px) {
+        padding: 0 10px 0;
+    }
+}
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+.reset-button {
+    margin: 0;
+    border: 0;
+    border: 1px solid black;
+    padding: 0;
+    font-family: inherit;
+    text-align: left;
+    // font-size: 1em;
+    color: inherit;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:disabled {
+        cursor: default;
+    }
+}
+.logo {
+    display: inline-block;
+    width: 91px;
+    height: 42px;
+}
+.button {
+    display: inline-flex;
+    padding: 18px 20px;
+    background-color: $white;
+    transition: 0.3s all;
+    span {
+        color: $black;
+        position: relative;
+        font-size: 20px;
+        transition: 0.3s all;
+    }
+    svg {
+        transition: 0.3s all;
+    }
+    svg > path {
+        width: 24px;
+        height: 24px;
+        transition: 0.3s all;
+        fill: $black;
+    }
+
+    &:hover {
+        background-color: $red;
+        svg {
+            transform: rotate(90deg);
+        }
+        svg > path {
+            fill: $white;
+        }
+        span {
+            color: $white;
+        }
+        &.border {
+            border: 2px solid $red;
+            span {
+                color: $red;
+            }
+            svg > path {
+                fill: $red;
+            }
+        }
+    }
+    &.border {
+        svg > path {
+            fill: $white;
+        }
+        border: 2px solid $white;
+        background-color: transparent;
+        span {
+            color: $white;
+        }
+    }
+}
+// .container-fluid{
+//     max-width: 100%;
+// 	margin: 0 auto;
+// }
