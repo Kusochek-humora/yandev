@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
 
+    
     const mixContainer = document.getElementById("mixitup");
 
     function mixInit(elem) {
