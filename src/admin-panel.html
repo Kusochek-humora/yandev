@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--#include virtual="/templates/_head.html" -->
+
+  <body class="wrapper" style="overflow-x: hidden">
+    <main class="admin">
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <a href="#" class="sidebar__logo"
+            ><img src="images/logo-panel.svg" alt="logo"
+          /></a>
+          <h1 class="sidebar__title">Административная панель</h1>
+        </div>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list">
+            <li class="sidebar__list-item">
+              <button class="sidebar__list-button" type="button">
+                Главный блок
+              </button>
+            </li>
+            <li class="sidebar__list-item">
+              <button class="sidebar__list-button" type="button">
+                Проекты
+              </button>
+            </li>
+            <li class="sidebar__list-item">
+              <button class="sidebar__list-button" type="button">Услуги</button>
+            </li>
+            <li class="sidebar__list-item">
+              <button class="sidebar__list-button" type="button">Заявки</button>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="panel" style="background: #fdfdfd">
+        <section class="panel__item" id="main-block">
+          <h2 class="panel__title">проекты</h2>
+          <div class="panel__main">
+            <div class="panel__main-top">
+              <p class="panel__caption-title">Всего проектов:6</p>
+
+              <button class="panel__caption-add" type="button">
+                <span>Добавить проект</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.5 2H18.5C20.7091 2 22.5 3.79086 22.5 6V18C22.5 20.2091 20.7091 22 18.5 22H6.5C4.29086 22 2.5 20.2091 2.5 18V6C2.5 3.79086 4.29086 2 6.5 2ZM20.2041 19.7041C20.6561 19.2522 20.91 18.6392 20.91 18V6C20.91 5.36083 20.6561 4.74784 20.2041 4.29587C19.7522 3.84391 19.1392 3.59 18.5 3.59H6.5C5.16899 3.59 4.09 4.66899 4.09 6V18C4.09 18.6392 4.34391 19.2522 4.79587 19.7041C5.24784 20.1561 5.86083 20.41 6.5 20.41H18.5C19.1392 20.41 19.7522 20.1561 20.2041 19.7041Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M16.5 11.25H13.25V8C13.25 7.58579 12.9142 7.25 12.5 7.25C12.0858 7.25 11.75 7.58579 11.75 8V11.25H8.5C8.08579 11.25 7.75 11.5858 7.75 12C7.75 12.4142 8.08579 12.75 8.5 12.75H11.75V16C11.75 16.4142 12.0858 16.75 12.5 16.75C12.9142 16.75 13.25 16.4142 13.25 16V12.75H16.5C16.9142 12.75 17.25 12.4142 17.25 12C17.25 11.5858 16.9142 11.25 16.5 11.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="panel__main-content">
+              <table class="panel__table">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>Фото</th>
+                    <th>Заголовок</th>
+                    <th>Период</th>
+                    <th>Сроки</th>
+                    <th>Категори</th>
+                    <th>Описание</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><img src="images/project-1.png" alt="image" /></td>
+                    <td>Название проекта</td>
+                    <td>май 2024</td>
+                    <td>1,5 месяца</td>
+                    <td>Веб-дизайн, HTML верст...</td>
+                    <td>Описание</td>
+                    <td>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.79007 15.2699L8.52007 11.8599C8.62635 11.3861 8.86574 10.9524 9.21007 10.6099L15.8801 3.99993C16.5565 3.3109 17.4748 2.91271 18.4401 2.88993C19.1681 2.8795 19.8701 3.1603 20.3901 3.66993C21.5263 5.01239 21.3796 7.01715 20.0601 8.17993L13.3901 14.8499C13.0476 15.1943 12.6139 15.4337 12.1401 15.5399L8.73007 16.2699H8.54007C8.29078 16.2795 8.05268 16.1661 7.903 15.9665C7.75332 15.7669 7.71111 15.5066 7.79007 15.2699ZM10.2701 11.6799C10.13 11.8157 10.0326 11.9895 9.99007 12.1799L9.50007 14.5099L11.8301 14.0099C12.0205 13.9674 12.1943 13.87 12.3301 13.7299L19.0001 7.05993C19.7308 6.47495 19.8758 5.42041 19.3301 4.65993C19.0911 4.43164 18.7704 4.3091 18.4401 4.31993C17.8706 4.34279 17.3326 4.58673 16.9401 4.99993L10.2701 11.6799Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M19.9101 10.9299C19.4981 10.9353 19.1655 11.268 19.1601 11.6799V17.3699C19.1735 18.1742 18.8633 18.9502 18.2993 19.5236C17.7352 20.0971 16.9645 20.42 16.1601 20.4199H6.63008C4.96745 20.3873 3.63519 19.0329 3.63008 17.3699V7.87993C3.65738 6.21502 5.01494 4.87971 6.68008 4.87993H12.3701C12.7843 4.87993 13.1201 4.54414 13.1201 4.12993C13.1201 3.71572 12.7843 3.37993 12.3701 3.37993H6.63008C4.13658 3.37978 2.10748 5.38658 2.08008 7.87993V17.3699C2.08008 19.8828 4.11718 21.9199 6.63008 21.9199H16.1201C18.6291 21.9144 20.6601 19.8789 20.6601 17.3699V11.6799C20.6547 11.268 20.322 10.9353 19.9101 10.9299Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </td>
+                    <td>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M18.79 7C18.3537 7 18 7.3537 18 7.79V16.63C18 18.4912 16.4912 20 14.63 20H8.95C7.0888 20 5.58 18.4912 5.58 16.63V7.79C5.58 7.3537 5.22631 7 4.79 7C4.3537 7 4 7.3537 4 7.79V16.63C4.02742 19.3719 6.25799 21.5801 9 21.58H14.68C17.4025 21.5529 19.6029 19.3525 19.63 16.63V7.79C19.6304 7.57152 19.5404 7.36262 19.3812 7.21294C19.2221 7.06326 19.008 6.98617 18.79 7Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.79 5.58H4.79C4.3537 5.58 4 5.22631 4 4.79C4 4.35369 4.3537 4 4.79 4H7.44L8.62 2.72C9.07107 2.26141 9.68675 2.00218 10.33 2H13.25C13.8839 1.99999 14.4918 2.25179 14.94 2.7L16.14 4H18.79C19.2263 4 19.58 4.35369 19.58 4.79C19.58 5.22631 19.2263 5.58 18.79 5.58ZM13.25 3.58H10.33C10.1301 3.58007 9.93744 3.65499 9.79 3.79L9.6 3.99H13.98L13.79 3.79C13.6436 3.65326 13.4503 3.57807 13.25 3.58Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M8.04 8.79V11.79C8.04 12.2042 8.37579 12.54 8.79 12.54C9.20421 12.54 9.54 12.2042 9.54 11.79V8.79C9.54 8.37579 9.20421 8.04 8.79 8.04C8.37579 8.04 8.04 8.37579 8.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M11.04 8.79V16.79C11.04 17.2042 11.3758 17.54 11.79 17.54C12.2042 17.54 12.54 17.2042 12.54 16.79V8.79C12.54 8.37579 12.2042 8.04 11.79 8.04C11.3758 8.04 11.04 8.37579 11.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M14.04 8.79V11.79C14.04 12.2042 14.3758 12.54 14.79 12.54C15.2042 12.54 15.54 12.2042 15.54 11.79V8.79C15.54 8.37579 15.2042 8.04 14.79 8.04C14.3758 8.04 14.04 8.37579 14.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td><img src="images/project-1.png" alt="image" /></td>
+                    <td>Название проекта</td>
+                    <td>май 2024</td>
+                    <td>1,5 месяца</td>
+                    <td>Веб-дизайн, HTML верст...</td>
+                    <td>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Dolorum optio magnam nesciunt autem, consequuntur
+                      asperiores atque dicta accusamus deserunt veritatis.
+                      Dolorem suscipit vero ipsam est amet. Voluptatibus ab eos
+                      nesciunt veniam! Totam tempore fugit ipsam eaque, vel
+                      dolorem voluptatum? Ex accusantium aut nam temporibus
+                      reprehenderit totam sunt non, consectetur at rem,
+                      inventore rerum porro ab cum illum quasi reiciendis, vitae
+                      expedita magnam officia. Delectus dolorum aliquid
+                      necessitatibus officiis iste, asperiores rem architecto
+                      accusantium tenetur quas ducimus explicabo laboriosam
+                      libero facilis quo dolores soluta ratione voluptatem
+                      magnam ut amet? Voluptates quas cumque necessitatibus,
+                      reiciendis totam facilis. Similique, qui consequuntur
+                      adipisci voluptatem atque repudiandae fugiat soluta
+                      voluptates iure id autem enim neque ad vitae magni sint
+                      mollitia, illo doloremque! Consequuntur architecto
+                      accusantium dolores, cumque accusamus repellat optio
+                      molestias quos animi minus unde, exercitationem inventore
+                      vitae ea! Aspernatur adipisci hic incidunt ducimus
+                      consequuntur nesciunt ab cumque ea nisi veritatis ipsam,
+                      quae cupiditate dolore non aliquid ullam nihil qui maiores
+                      obcaecati numquam ratione aperiam doloremque eum. Animi
+                      recusandae vitae, voluptas eveniet ut dicta nam
+                      dignissimos repudiandae nisi minus quo in assumenda
+                      architecto? Tempora, molestias. Nesciunt expedita minus
+                      vitae nulla, quae earum iure alias nam incidunt quam
+                      maiores delectus, ipsum sunt asperiores debitis. Fugit,
+                      neque!
+                    </td>
+                    <td>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M7.79007 15.2699L8.52007 11.8599C8.62635 11.3861 8.86574 10.9524 9.21007 10.6099L15.8801 3.99993C16.5565 3.3109 17.4748 2.91271 18.4401 2.88993C19.1681 2.8795 19.8701 3.1603 20.3901 3.66993C21.5263 5.01239 21.3796 7.01715 20.0601 8.17993L13.3901 14.8499C13.0476 15.1943 12.6139 15.4337 12.1401 15.5399L8.73007 16.2699H8.54007C8.29078 16.2795 8.05268 16.1661 7.903 15.9665C7.75332 15.7669 7.71111 15.5066 7.79007 15.2699ZM10.2701 11.6799C10.13 11.8157 10.0326 11.9895 9.99007 12.1799L9.50007 14.5099L11.8301 14.0099C12.0205 13.9674 12.1943 13.87 12.3301 13.7299L19.0001 7.05993C19.7308 6.47495 19.8758 5.42041 19.3301 4.65993C19.0911 4.43164 18.7704 4.3091 18.4401 4.31993C17.8706 4.34279 17.3326 4.58673 16.9401 4.99993L10.2701 11.6799Z"
+                          fill="black"
+                        />
+                        <path
+                          d="M19.9101 10.9299C19.4981 10.9353 19.1655 11.268 19.1601 11.6799V17.3699C19.1735 18.1742 18.8633 18.9502 18.2993 19.5236C17.7352 20.0971 16.9645 20.42 16.1601 20.4199H6.63008C4.96745 20.3873 3.63519 19.0329 3.63008 17.3699V7.87993C3.65738 6.21502 5.01494 4.87971 6.68008 4.87993H12.3701C12.7843 4.87993 13.1201 4.54414 13.1201 4.12993C13.1201 3.71572 12.7843 3.37993 12.3701 3.37993H6.63008C4.13658 3.37978 2.10748 5.38658 2.08008 7.87993V17.3699C2.08008 19.8828 4.11718 21.9199 6.63008 21.9199H16.1201C18.6291 21.9144 20.6601 19.8789 20.6601 17.3699V11.6799C20.6547 11.268 20.322 10.9353 19.9101 10.9299Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </td>
+                    <td>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M18.79 7C18.3537 7 18 7.3537 18 7.79V16.63C18 18.4912 16.4912 20 14.63 20H8.95C7.0888 20 5.58 18.4912 5.58 16.63V7.79C5.58 7.3537 5.22631 7 4.79 7C4.3537 7 4 7.3537 4 7.79V16.63C4.02742 19.3719 6.25799 21.5801 9 21.58H14.68C17.4025 21.5529 19.6029 19.3525 19.63 16.63V7.79C19.6304 7.57152 19.5404 7.36262 19.3812 7.21294C19.2221 7.06326 19.008 6.98617 18.79 7Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M18.79 5.58H4.79C4.3537 5.58 4 5.22631 4 4.79C4 4.35369 4.3537 4 4.79 4H7.44L8.62 2.72C9.07107 2.26141 9.68675 2.00218 10.33 2H13.25C13.8839 1.99999 14.4918 2.25179 14.94 2.7L16.14 4H18.79C19.2263 4 19.58 4.35369 19.58 4.79C19.58 5.22631 19.2263 5.58 18.79 5.58ZM13.25 3.58H10.33C10.1301 3.58007 9.93744 3.65499 9.79 3.79L9.6 3.99H13.98L13.79 3.79C13.6436 3.65326 13.4503 3.57807 13.25 3.58Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M8.04 8.79V11.79C8.04 12.2042 8.37579 12.54 8.79 12.54C9.20421 12.54 9.54 12.2042 9.54 11.79V8.79C9.54 8.37579 9.20421 8.04 8.79 8.04C8.37579 8.04 8.04 8.37579 8.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M11.04 8.79V16.79C11.04 17.2042 11.3758 17.54 11.79 17.54C12.2042 17.54 12.54 17.2042 12.54 16.79V8.79C12.54 8.37579 12.2042 8.04 11.79 8.04C11.3758 8.04 11.04 8.37579 11.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                        <path
+                          d="M14.04 8.79V11.79C14.04 12.2042 14.3758 12.54 14.79 12.54C15.2042 12.54 15.54 12.2042 15.54 11.79V8.79C15.54 8.37579 15.2042 8.04 14.79 8.04C14.3758 8.04 14.04 8.37579 14.04 8.79Z"
+                          fill="#CC0000"
+                        />
+                      </svg>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <section
+          style="display: none"
+          class="panel__item"
+          id="portfolio-block"
+        ></section>
+        <section
+          style="display: none"
+          class="panel__item"
+          id="services-block"
+        ></section>
+        <section
+          data-name="service"
+          style="display: none"
+          class="panel__item"
+          id="request-block"
+        ></section>
+      </div>
+    </main>
+  </body>
+</html>

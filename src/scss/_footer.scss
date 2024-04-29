@@ -1,0 +1,45 @@
+.footer {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+    }
+
+    &__social {
+        display: flex;
+        gap: 0 20px;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    // &__social-item {
+    // }
+
+    &__social-link {
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        background-color: transparent;
+        border-radius: 50%;
+
+        transition: 0.3s all;
+        svg,
+        path {
+            transition: 0.3s all;
+        }
+        &:hover {
+            path {
+                fill: $red;
+            }
+        }
+    }
+
+    &__copyright {
+        font-size: 16px;
+        color: $white;
+        font-weight: 300;
+    }
+}

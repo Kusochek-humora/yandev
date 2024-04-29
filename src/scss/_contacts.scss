@@ -1,0 +1,308 @@
+.contacts {
+    padding: 80px 0;
+    &__container {
+    }
+
+    &__title {
+        font-size: 32px;
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+
+        margin-bottom: 40px;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 20px;
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &__simple,
+    &__media {
+        flex: 1 1 calc(50% - 20px);
+    }
+    &__simple {
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px 0;
+    }
+
+    &__input-simple {
+        background-color: transparent;
+        border-bottom: 1px solid $white;
+        padding: 18px 20px;
+
+        color: $white;
+        font-size: 20px;
+        transition: 0.3s all;
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid rgba($color: $red, $alpha: 1) !important;
+            background-color: transparent;
+        }
+        &.valid {
+            border-bottom: 1px solid rgba($color: #02d40d, $alpha: 1);
+        }
+        &.error {
+            border-bottom: 1px solid $red;
+        }
+        &::placeholder {
+            color: #555;
+            text-align: left;
+
+            font-size: 16px;
+
+            font-weight: 400;
+        }
+    }
+
+    &__textarea {
+        background-color: transparent;
+        padding: 18px 20px;
+        resize: none;
+        min-height: 200px;
+        // height: 100%;
+        // border-top: 0;
+        // border-left: 0;
+        // border-right: 0;
+        border: 1px solid $white;
+
+        color: $white;
+        font-size: 20px;
+        transition: 0.3s all;
+        &:focus {
+            outline: none;
+            border: 1px solid rgba($color: $red, $alpha: 1) !important;
+            background-color: transparent;
+        }
+        &.valid {
+            border: 1px solid rgba($color: #02d40d, $alpha: 1);
+        }
+        &.error {
+            border: 1px solid $red;
+        }
+        &::placeholder {
+            font-size: 20px;
+            color: #555;
+            font-weight: 400;
+
+            font-family: "Helvetica", serif;
+        }
+    }
+    &__label {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        span {
+            color: #555;
+            font-size: 20px;
+        }
+    }
+    &__msg {
+        margin-top: auto;
+        align-self: flex-end;
+    }
+    &__media {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+    }
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    // &__select,
+    // &__upload {
+    //     flex: 0 0 calc(50% - 20px);
+    // }
+    &__select {
+        position: relative;
+        transition: 0.3s all;
+        span {
+            color: #555;
+            font-size: 20px;
+        }
+        &.active {
+            box-shadow: drop-shadow(14px 1px 40px $red);
+            // cursor: url(../images/cumming_page_01.png), pointer;
+
+            // animation: cursor 400ms infinite;
+        }
+    }
+
+    &__select-title {
+        font-size: 20px;
+        padding: 18px 20px;
+        border-bottom: 1px solid $white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.3s all;
+
+        span {
+            color: $white;
+
+            transition: 0.3s all;
+        }
+        svg {
+            transition: 0.3s all;
+            path {
+                transition: 0.3s all;
+            }
+        }
+        &:hover,
+        &.active {
+            svg {
+                transform: rotateZ(90deg);
+            }
+            span {
+                color: $red;
+            }
+            border-bottom: 1px solid $red;
+            path {
+                fill: $red;
+            }
+        }
+    }
+    &__datetime {
+        display: flex;
+        gap: 30px;
+        width: 100%;
+        label {
+            width: auto;
+        }
+        input {
+            width: 100%;
+        }
+    }
+    &__meeting-title {
+        font-size: 24px;
+        color: $white;
+    }
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        padding-top: 30px;
+        background-color: $black;
+        position: absolute;
+        top: 100%; /* Подстраиваем расстояние между заголовком и списком опций */
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        opacity: 0; /* Начальная прозрачность */
+        transition: all 0.3s ease;
+        visibility: hidden;
+        overflow: hidden;
+        &.show {
+            visibility: visible;
+            overflow: visible;
+            opacity: 1;
+        }
+        li {
+            color: $grey;
+            width: 100%;
+            padding: 20px;
+            border-bottom: 1px solid $grey;
+            font-size: 16px;
+            transition: 0.3s all;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 1px solid $red !important;
+                color: $red !important;
+            }
+            &:hover {
+                border-bottom: 1px solid $white;
+                color: $white;
+            }
+        }
+    }
+
+    &__upload {
+        margin-top: 20px;
+    }
+    &__upload-box {
+        cursor: pointer;
+
+        &:hover {
+            span,
+            path {
+                color: $red;
+                fill: $red;
+            }
+        }
+        label {
+            display: flex;
+            gap: 0 10px;
+            align-items: center;
+            // pointer-events: none;
+            svg,
+            span,
+            path {
+                transition: 0.3s all;
+                pointer-events: none;
+            }
+        }
+    }
+    &__upload-title {
+        font-size: 20px;
+        color: $white;
+    }
+    &__uploaded-area {
+        border: 1px solid $red;
+        background-color: #110f0f;
+        list-style: none;
+        padding: 15px 20px;
+        color: $red;
+        font-size: 16px;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+        transition: 0.5s all;
+        &.active {
+            visibility: visible;
+            opacity: 1;
+            overflow: visible;
+        }
+    }
+    &__upload-text {
+        margin-top: 5px;
+        color: #555;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    &__maxlength {
+        display: inline-block;
+        margin-bottom: 10px;
+        text-align: right;
+        color: $white;
+    }
+    &__upload-progress {
+    }
+    &__submit {
+        padding: 18px 20px;
+        background-color: $white;
+        text-transform: uppercase;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 350px;
+        width: 100%;
+        text-align: center;
+
+        margin-top: 50px;
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+}

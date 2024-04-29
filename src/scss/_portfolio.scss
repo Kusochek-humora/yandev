@@ -1,5 +1,5 @@
 .portfolio {
-    padding-top: 80px;
+    padding: 80px 0;
     &__container {
         display: flex;
         flex-direction: column;
@@ -52,11 +52,15 @@
     }
 
     &__card {
-
+        position: relative;
+        z-index: 9;
         cursor: pointer;
         flex: 0 1 calc(50% - 20px);
         &:hover {
             div {
+                img {
+                    transform: scale(1.2);
+                }
                 &::after {
                     background: rgba(0, 0, 0, 0.6);
                 }
@@ -71,6 +75,8 @@
         height: 315px;
         position: relative;
         margin-bottom: 20px;
+        pointer-events: none;
+        overflow: hidden;
         &::after,
         &::before {
             position: absolute;
@@ -123,6 +129,8 @@
         object-position: center;
         top: 0;
         left: 0;
+
+        transition: 0.3s all;
     }
 
     &__description {

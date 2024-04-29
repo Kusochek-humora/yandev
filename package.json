@@ -35,8 +35,13 @@
     "gulp-svgmin": "^3.0.0"
   },
   "dependencies": {
+    "choices.js": "^10.2.0",
+    "cleave.js": "^1.6.0",
     "magnific-popup": "^1.1.0",
+    "mixitup": "^3.3.1",
     "normalize.css": "^8.0.1",
+    "nouislider": "^15.7.1",
+    "tippy.js": "^6.3.7",
     "typed.js": "^2.1.0"
   }
 }

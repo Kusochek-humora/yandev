@@ -32,7 +32,12 @@ export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
 		'node_modules/typed.js/dist/typed.umd.js',
+		'node_modules/mixitup/dist/mixitup.min.js',
+		'node_modules/cleave.js/dist/cleave.min.js',
+		'node_modules/tippy.js/dist/tippy-bundle.umd.min.js',
+
 	])
+
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(concat('vendor.min.js'))
@@ -52,6 +57,44 @@ export const buildJs = (done) => {
 		.pipe(gulp.dest('dist/js'))
 		.pipe(sync.stream());
 
+	gulp.src('src/js/forms.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('forms.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
+
+	gulp.src('src/js/panel.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('panel.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
+	done();
+	gulp.src('src/js/request.js')
+		.pipe(plumber())
+		.pipe(rigger())
+		.pipe(babel({
+			presets: ['@babel/preset-env']
+		}))
+		.pipe(sourcemaps.init())
+		.pipe(uglify())
+		.pipe(sourcemaps.write())
+		.pipe(concat('request.min.js'))
+		.pipe(gulp.dest('dist/js'))
+		.pipe(sync.stream());
 	done();
 };
 
@@ -60,6 +103,8 @@ export const buildJs = (done) => {
 export const buildCss = (done) => {
 	gulp.src([
 		'node_modules/normalize.css/normalize.css',
+		'node_modules/tippy.js/dist/tippy.css',
+
 	])
 		.pipe(prefixer())
 		.pipe(csso())

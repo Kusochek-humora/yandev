@@ -4,7 +4,7 @@
     position: fixed;
 
     width: 100%;
-    z-index: 2;
+    z-index: 1000000000000000;
     background-color: $black;
     &__burger {
         display: none;
@@ -50,7 +50,7 @@
         font-size: 16px;
         color: $white;
         font-weight: 300;
-text-transform: uppercase;
+        text-transform: uppercase;
         transition: 0.3s all;
     }
 
@@ -61,7 +61,10 @@ text-transform: uppercase;
 
     // &__social-item {
     // }
-
+    &__title {
+        font-size: 16px;
+        color: $white;
+    }
     &__social-link {
         width: 24px;
         height: 24px;

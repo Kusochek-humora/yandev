@@ -7,6 +7,52 @@
         min-height: 554px;
         height: auto;
     }
+    &__image {
+        transition: 0.3s ease-in-out all;
+        &:hover {
+            filter: drop-shadow(14px 1px 40px $red);
+            // cursor: url(../images/cumming_page_01.png), pointer;
+
+            // animation: cursor 400ms infinite;
+        }
+
+        // @keyframes cursor {
+        //     0% {
+        //         cursor: url(../images/cumming_page_01.png), pointer;
+        //     }
+        //     10% {
+        //         cursor: url(../images/cumming_page_02.png), pointer;
+        //     }
+        //     20% {
+        //         cursor: url(../images/cumming_page_03.png), pointer;
+        //     }
+        //     30% {
+        //         cursor: url(../images/cumming_page_04.png), pointer;
+        //     }
+        //     40% {
+        //         cursor: url(../images/cumming_page_05.png), pointer;
+        //     }
+        //     60% {
+        //         cursor: url(../images/cumming_page_06.png), pointer;
+        //     }
+        //     70% {
+        //         cursor: url(../images/cumming_page_07.png), pointer;
+        //     }
+        //     80% {
+        //         cursor: url(../images/cumming_page_08.png), pointer;
+        //     }
+        //     90% {
+        //         cursor: url(../images/cumming_page_09.png), pointer;
+        //     }
+        //     100% {
+        //         cursor: url(../images/cumming_page_10.png), pointer;
+        //     }
+        // }
+    }
+
+    // &:active {
+
+    //                 }
 
     &__info {
         display: flex;
