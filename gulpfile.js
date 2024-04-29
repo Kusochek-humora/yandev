@@ -96,6 +96,8 @@ export const buildJs = (done) => {
 		.pipe(gulp.dest('dist/js'))
 		.pipe(sync.stream());
 	done();
+
+	
 };
 
 // Styles
