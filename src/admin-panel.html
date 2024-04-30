@@ -14,32 +14,52 @@
         <nav class="sidebar__nav">
           <ul class="sidebar__list">
             <li class="sidebar__list-item">
-              <button class="sidebar__list-button" type="button">
+              <button
+                class="sidebar__list-button"
+                data-tab="main"
+                type="button"
+              >
                 Главный блок
               </button>
             </li>
             <li class="sidebar__list-item">
-              <button class="sidebar__list-button" type="button">
+              <button
+                class="sidebar__list-button"
+                data-tab="project"
+                type="button"
+              >
                 Проекты
               </button>
             </li>
             <li class="sidebar__list-item">
-              <button class="sidebar__list-button" type="button">Услуги</button>
+              <button
+                class="sidebar__list-button"
+                data-tab="services"
+                type="button"
+              >
+                Услуги
+              </button>
             </li>
             <li class="sidebar__list-item">
-              <button class="sidebar__list-button" type="button">Заявки</button>
+              <button
+                class="sidebar__list-button"
+                data-tab="application"
+                type="button"
+              >
+                Заявки
+              </button>
             </li>
           </ul>
         </nav>
       </aside>
       <div class="panel" style="background: #fdfdfd">
-        <section class="panel__item" id="main-block">
+        <section class="panel__item" id="main-block" data-content="project">
           <h2 class="panel__title">проекты</h2>
           <div class="panel__main">
             <div class="panel__main-top">
               <p class="panel__caption-title">Всего проектов:6</p>
 
-              <button class="panel__caption-add" type="button">
+              <button class="panel__caption-add" data-modal-btn="projects" type="button">
                 <span>Добавить проект</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -176,7 +196,7 @@
                       maiores delectus, ipsum sunt asperiores debitis. Fugit,
                       neque!
                     </td>
-                    <td>
+                    <td data-modal-btn="projects">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -196,7 +216,7 @@
                         />
                       </svg>
                     </td>
-                    <td>
+                    <td data-modal-btn="projects">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -235,24 +255,40 @@
           </div>
         </section>
         <section
-          style="display: none"
+          data-content="services"
           class="panel__item"
           id="portfolio-block"
         ></section>
         <section
-          style="display: none"
+          data-content="application"
           class="panel__item"
           id="services-block"
         ></section>
         <section
-          data-name="service"
-          style="display: none"
+          data-content="main"
           class="panel__item"
           id="request-block"
         ></section>
       </div>
     </main>
-
-
+    <div class="modal-panel" data-modal="main">
+      <button type="button" class="modal-panel__close" data-close="main">X</button>
+    </div>
+    <div class="modal-panel" data-modal="services">
+      <button type="button" class="modal-panel__close" data-close="services">X</button>
+    </div>
+    <div class="modal-panel" data-modal="projects">
+      <button type="button" class="modal-panel__close" data-close="projects">X</button>
+    </div>
+    <div class="modal-panel" data-modal="application">
+      <button type="button" class="modal-panel__close" data-close="application">X</button>
+    </div>
+    <button
+      aria-label="overlay"
+      class="overlay-panel"
+      type="button"
+      id="overlay"
+    ></button>
+    <script src="js/panel.min.js"></script>
   </body>
 </html>
