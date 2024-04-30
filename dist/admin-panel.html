@@ -276,7 +276,56 @@
           data-content="services"
           class="panel__item"
           id="portfolio-block"
-        ></section>
+        >
+          <h2 class="panel__title">услуги</h2>
+          <div class="panel__main">
+            <div class="panel__main-top">
+              <p class="panel__caption-title">Всего услуг: <span class="panel__num"></span></p>
+
+              <button
+                class="panel__caption-add"
+                data-modal-btn="projects"
+                type="button"
+              >
+                <span>Добавить услугу</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.5 2H18.5C20.7091 2 22.5 3.79086 22.5 6V18C22.5 20.2091 20.7091 22 18.5 22H6.5C4.29086 22 2.5 20.2091 2.5 18V6C2.5 3.79086 4.29086 2 6.5 2ZM20.2041 19.7041C20.6561 19.2522 20.91 18.6392 20.91 18V6C20.91 5.36083 20.6561 4.74784 20.2041 4.29587C19.7522 3.84391 19.1392 3.59 18.5 3.59H6.5C5.16899 3.59 4.09 4.66899 4.09 6V18C4.09 18.6392 4.34391 19.2522 4.79587 19.7041C5.24784 20.1561 5.86083 20.41 6.5 20.41H18.5C19.1392 20.41 19.7522 20.1561 20.2041 19.7041Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M16.5 11.25H13.25V8C13.25 7.58579 12.9142 7.25 12.5 7.25C12.0858 7.25 11.75 7.58579 11.75 8V11.25H8.5C8.08579 11.25 7.75 11.5858 7.75 12C7.75 12.4142 8.08579 12.75 8.5 12.75H11.75V16C11.75 16.4142 12.0858 16.75 12.5 16.75C12.9142 16.75 13.25 16.4142 13.25 16V12.75H16.5C16.9142 12.75 17.25 12.4142 17.25 12C17.25 11.5858 16.9142 11.25 16.5 11.25Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="panel__main-content">
+              <table class="panel__table">
+                <thead>
+                  <tr>
+                    <th>пп</th>
+                    <th>Иконка</th>
+                    <th>Название услуги</th>
+                    <th>Описание</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
         <section
           data-content="application"
           class="panel__item"
@@ -293,6 +342,7 @@
       <button type="button" class="modal-panel__close" data-close="main">
         X
       </button>
+   
     </div>
     <div class="modal-panel" data-modal="services">
       <button type="button" class="modal-panel__close" data-close="services">
@@ -303,6 +353,30 @@
       <button type="button" class="modal-panel__close" data-close="projects">
         X
       </button>
+
+      <form class="panel-form">
+        <h2 class="panel-form__title">Об услуге</h2>
+        <div class="panel-form__inner">
+          <label  class="panel-form__label">
+            <span class="panel-form__text">Порядковый номер</span>
+            <input type="text" class="panel-form__case" name="sort-order" placeholder="Введите номер">
+          </label>
+          <label  class="panel-form__label">
+            <span class="panel-form__text">Название</span>
+            <input type="text" class="panel-form__case" name="title" placeholder="Введите название"> 
+          </label>
+          <div  class="panel-form__label">
+            <span class="panel-form__text">Описание</span>
+            <textarea type="text" class="panel-form__case" name="description" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div  class="panel-form__label">
+            <span class="panel-form__text">Иконка</span>
+            <textarea type="text" class="panel-form__case" name="file-icon" placeholder="Введите svg код"></textarea>
+          </div>
+        </div>
+        <button class="panel-form__button" type="button">Отправить</button>
+      </form>
     </div>
     <div class="modal-panel" data-modal="application">
       <button type="button" class="modal-panel__close" data-close="application">
@@ -315,7 +389,7 @@
       type="button"
       id="overlay"
     ></button>
-    <script src="js/panel.min.js?=1714486984233"></script>
-    <script src="js/services.min.js?=1714486984233"></script>
+    <script src="js/panel.min.js?=1714495127335"></script>
+    <script src="js/services.min.js?=1714495127335"></script>
   </body>
 </html>
