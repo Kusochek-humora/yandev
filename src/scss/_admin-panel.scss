@@ -205,6 +205,8 @@
     }
 }
 .modal-panel {
+    max-width: 1000px;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -231,5 +233,69 @@
     path,
     g {
         pointer-events: none !important;
+    }
+}
+.panel-form {
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: #1f1f1f;
+
+        margin-bottom: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px 0;
+
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: flex;
+        gap: 0 20px;
+    }
+
+    &__text {
+        color: #1f1f1f;
+        min-width: 110px;
+        text-align: left;
+    }
+
+    &__case {
+        display: inline-block;
+        width: 100%;
+        color: #000;
+        border-radius: 8px;
+        border: 1px solid #e3e3e3;
+        transition: 0.3s all;
+        outline: none;
+        &::placeholder {
+            color: #989898;
+
+            font-size: 16px;
+        }
+        &:focus {
+            border: 1px solid $black;
+        }
+    }
+
+    &__button {
+        display: flex;
+        max-width: 315px;
+        width: 100%;
+        padding: 18px 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+
+        font-size: 20px;
+        color: #fff;
     }
 }

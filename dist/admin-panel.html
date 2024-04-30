@@ -276,7 +276,9 @@
           data-content="services"
           class="panel__item"
           id="portfolio-block"
-        ></section>
+        >
+   
+        </section>
         <section
           data-content="application"
           class="panel__item"
@@ -293,6 +295,7 @@
       <button type="button" class="modal-panel__close" data-close="main">
         X
       </button>
+   
     </div>
     <div class="modal-panel" data-modal="services">
       <button type="button" class="modal-panel__close" data-close="services">
@@ -303,6 +306,30 @@
       <button type="button" class="modal-panel__close" data-close="projects">
         X
       </button>
+
+      <form class="panel-form">
+        <h2 class="panel-form__title">Об услуге</h2>
+        <div class="panel-form__inner">
+          <label  class="panel-form__label">
+            <span class="panel-form__text">Порядковый номер</span>
+            <input type="text" class="panel-form__case" name="sort-order" placeholder="Введите номер">
+          </label>
+          <label  class="panel-form__label">
+            <span class="panel-form__text">Название</span>
+            <input type="text" class="panel-form__case" name="title" placeholder="Введите название"> 
+          </label>
+          <div  class="panel-form__label">
+            <span class="panel-form__text">Описание</span>
+            <textarea type="text" class="panel-form__case" name="description" placeholder="Введите текст"></textarea>
+          </div>
+
+          <div  class="panel-form__label">
+            <span class="panel-form__text">Иконка</span>
+            <textarea type="text" class="panel-form__case" name="file-icon" placeholder="Введите svg код"></textarea>
+          </div>
+        </div>
+        <button class="panel-form__button" type="button">Отправить</button>
+      </form>
     </div>
     <div class="modal-panel" data-modal="application">
       <button type="button" class="modal-panel__close" data-close="application">
@@ -315,7 +342,7 @@
       type="button"
       id="overlay"
     ></button>
-    <script src="js/panel.min.js?=1714486984233"></script>
-    <script src="js/services.min.js?=1714486984233"></script>
+    <script src="js/panel.min.js?=1714490507474"></script>
+    <script src="js/services.min.js?=1714490507474"></script>
   </body>
 </html>
