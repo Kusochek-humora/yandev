@@ -53,7 +53,7 @@
         </nav>
       </aside>
       <div class="panel" style="background: #fdfdfd">
-        <section class="panel__item" id="main-block" data-content="project">
+        <section class="panel__item" id="project-block" data-content="project">
           <h2 class="panel__title">проекты</h2>
           <div class="panel__main">
             <div class="panel__main-top">
@@ -63,6 +63,7 @@
                 class="panel__caption-add"
                 data-modal-btn="projects"
                 type="button"
+                data-request-project="add"
               >
                 <span>Добавить проект</span>
                 <svg
@@ -200,7 +201,7 @@
                       maiores delectus, ipsum sunt asperiores debitis. Fugit,
                       neque!
                     </td>
-                    <td data-modal-btn="projects">
+                    <td data-modal-btn="projects" data-request-project="update">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -220,7 +221,7 @@
                         />
                       </svg>
                     </td>
-                    <td data-modal-btn="projects">
+                    <td data-modal-btn="projects" data-request-project="delete">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -261,16 +262,18 @@
         <section
           data-content="services"
           class="panel__item"
-          id="portfolio-block"
+          id="services-block"
         >
           <h2 class="panel__title">услуги</h2>
           <div class="panel__main">
             <div class="panel__main-top">
-              <p class="panel__caption-title">Всего услуг: <span class="panel__num"></span></p>
+              <p class="panel__caption-title">
+                Всего услуг: <span class="panel__num"></span>
+              </p>
 
               <button
                 class="panel__caption-add"
-                data-modal-btn="projects"
+                data-modal-btn="services"
                 type="button"
               >
                 <span>Добавить услугу</span>
@@ -306,21 +309,20 @@
                     <th></th>
                   </tr>
                 </thead>
-                <tbody>
-                </tbody>
+                <tbody></tbody>
               </table>
             </div>
           </div>
         </section>
         <section
+          id="portfolio-block"
           data-content="application"
           class="panel__item"
-          id="services-block"
         ></section>
         <section
           data-content="main"
           class="panel__item"
-          id="request-block"
+          id="main-block"
         ></section>
       </div>
     </main>
@@ -328,40 +330,187 @@
       <button type="button" class="modal-panel__close" data-close="main">
         X
       </button>
-   
     </div>
     <div class="modal-panel" data-modal="services">
       <button type="button" class="modal-panel__close" data-close="services">
         X
       </button>
+      <!-- <form class="panel-form" data-form="services">
+        <h2 class="panel-form__title">Об услуге</h2>
+        <div class="panel-form__inner">
+          <label class="panel-form__label">
+            <span class="panel-form__text">Порядковый номер</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="sort-order"
+              placeholder="Введите номер"
+            />
+          </label>
+          <label class="panel-form__label">
+            <span class="panel-form__text">Название</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="title"
+              placeholder="Введите название"
+            />
+          </label>
+          <div class="panel-form__label">
+            <span class="panel-form__text">Описание</span>
+            <textarea
+              type="text"
+              class="panel-form__case"
+              name="description"
+              placeholder="Введите текст"
+            ></textarea>
+          </div>
+
+          <div class="panel-form__label">
+            <span class="panel-form__text">Иконка</span>
+            <textarea
+              type="text"
+              class="panel-form__case"
+              name="file-icon"
+              placeholder="Введите svg код"
+            ></textarea>
+          </div>
+        </div>
+        <button class="panel-form__button" type="button" id="projects-submit">
+          Отправить
+        </button>
+      </form> -->
     </div>
     <div class="modal-panel" data-modal="projects">
       <button type="button" class="modal-panel__close" data-close="projects">
         X
       </button>
-
-      <form class="panel-form">
+      <form class="panel-form" data-form="projects">
         <h2 class="panel-form__title">Об услуге</h2>
         <div class="panel-form__inner">
-          <label  class="panel-form__label">
-            <span class="panel-form__text">Порядковый номер</span>
-            <input type="text" class="panel-form__case" name="sort-order" placeholder="Введите номер">
+          <label class="panel-form__label">
+            <span class="panel-form__text">Порядк отображения</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="sort-order"
+              placeholder="Введите номер"
+            />
           </label>
-          <label  class="panel-form__label">
-            <span class="panel-form__text">Название</span>
-            <input type="text" class="panel-form__case" name="title" placeholder="Введите название"> 
+          <label class="panel-form__label">
+            <span class="panel-form__text">Заголовок</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="title"
+              placeholder="Введите название"
+            />
           </label>
-          <div  class="panel-form__label">
-            <span class="panel-form__text">Описание</span>
-            <textarea type="text" class="panel-form__case" name="description" placeholder="Введите текст"></textarea>
+          <div class="panel-form__label">
+            <span class="panel-form__text">О проекте</span>
+            <textarea
+              type="text"
+              class="panel-form__case"
+              name="description"
+              placeholder="Введите текст"
+            ></textarea>
           </div>
+          <label class="panel-form__label">
+            <span class="panel-form__text">Период</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="period"
+              placeholder="Введите название"
+            />
+          </label>
+          <label class="panel-form__label">
+            <span class="panel-form__text">Сроки</span>
+            <input
+              type="text"
+              class="panel-form__case"
+              name="deadline"
+              placeholder="Введите название"
+            />
+          </label>
+          <div class="panel-form__checkboxes">
+            <span class="panel-form__text">
+              Категории
+            </span>
+            <div class="panel-form__checkboxes-items">
+              <input
+              value="HTML/CSS верстка"
+              type="checkbox"
+              id="c-1"
+              name="tags"
+              hidden
+            />
+            <label class="panel-form__chechbox-title" for="c-1">
+              HTML/CSS верстка
+            </label>
+            <input
+              value="Веб-дизайн"
+              type="checkbox"
+              id="c-2"
+              name="tags"
+              hidden
+            />
+            <label class="panel-form__chechbox-title" for="c-2">
+              Веб-дизайн
+            </label>
+            <input
+              value="Фронтенд-разработка"
+              type="checkbox"
+              id="c-3"
+              name="tags"
+              hidden
+            />
+            <label class="panel-form__chechbox-title" for="c-3">
+              Фронтенд-разработка
+            </label>
+            </div>
+          </div>
+          <div class="panel-form__upload">
+            <div class="panel-form__upload-box">
+              <input
+                type="file"
+                id="fileInput"
+                hidden
+                name="file_cover"
+                multiple
+              />
+              <label for="fileInput" class="panel-form__upload-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                >
+                  <path
+                    d="M7.23897 21.95C6.10156 21.9503 4.98961 21.6133 4.04382 20.9815C3.09803 20.3496 2.36091 19.4515 1.92572 18.4006C1.49054 17.3498 1.37685 16.1934 1.59905 15.0779C1.82124 13.9624 2.36934 12.9379 3.17397 12.134L11.659 3.648C11.7997 3.5073 11.9905 3.42826 12.1895 3.42826C12.3884 3.42826 12.5793 3.5073 12.72 3.648C12.8607 3.78869 12.9397 3.97952 12.9397 4.1785C12.9397 4.37747 12.8607 4.5683 12.72 4.709L4.23397 13.194C3.82314 13.585 3.49471 14.0542 3.26804 14.5741C3.04136 15.0939 2.92103 15.6539 2.91412 16.221C2.90721 16.788 3.01387 17.3508 3.22782 17.876C3.44176 18.4012 3.75866 18.8783 4.15985 19.2792C4.56104 19.68 5.03839 19.9965 5.5638 20.21C6.0892 20.4236 6.65202 20.5297 7.2191 20.5224C7.78618 20.515 8.34605 20.3942 8.86572 20.1671C9.38539 19.94 9.85435 19.6112 10.245 19.2L21.205 8.24C21.7072 7.72136 21.9854 7.02608 21.9797 6.30414C21.9739 5.58221 21.6845 4.89148 21.174 4.38098C20.6635 3.87048 19.9728 3.58111 19.2508 3.57532C18.5289 3.56952 17.8336 3.84776 17.315 4.35L8.47697 13.194C8.36088 13.3101 8.2688 13.4479 8.20597 13.5996C8.14314 13.7513 8.11081 13.9138 8.11081 14.078C8.11081 14.2422 8.14314 14.4047 8.20597 14.5564C8.2688 14.7081 8.36088 14.8459 8.47697 14.962C8.59306 15.0781 8.73088 15.1702 8.88255 15.233C9.03423 15.2958 9.1968 15.3282 9.36097 15.3282C9.52514 15.3282 9.68771 15.2958 9.83939 15.233C9.99107 15.1702 10.1289 15.0781 10.245 14.962L15.9 9.306C15.9691 9.23433 16.0519 9.17716 16.1433 9.13781C16.2348 9.09846 16.3332 9.07772 16.4328 9.07681C16.5324 9.0759 16.6312 9.09483 16.7234 9.1325C16.8155 9.17016 16.8993 9.22581 16.9698 9.2962C17.0402 9.36659 17.0959 9.4503 17.1337 9.54245C17.1714 9.63461 17.1905 9.73336 17.1897 9.83294C17.1888 9.93253 17.1682 10.0309 17.1289 10.1225C17.0897 10.214 17.0326 10.2968 16.961 10.366L11.305 16.023C11.0496 16.2784 10.7465 16.481 10.4128 16.6193C10.0791 16.7576 9.7215 16.8287 9.36032 16.8288C8.99915 16.8288 8.64151 16.7577 8.30781 16.6196C7.97411 16.4814 7.67089 16.2789 7.41547 16.0235C7.16005 15.7681 6.95743 15.465 6.81917 15.1313C6.68091 14.7977 6.60973 14.44 6.60968 14.0789C6.60959 13.3494 6.89926 12.6498 7.41497 12.134L16.255 3.3C17.0519 2.50289 18.1329 2.05503 19.2601 2.05493C20.3873 2.05484 21.4684 2.50252 22.2655 3.2995C23.0626 4.09647 23.5104 5.17746 23.5105 6.30464C23.5106 7.43183 23.0629 8.51289 22.266 9.31L11.306 20.266C10.773 20.8016 10.1392 21.2262 9.44111 21.5153C8.74302 21.8043 7.99454 21.9521 7.23897 21.95Z"
+                    fill="black"
+                  />
+                </svg>
+                <span>Прикрепить файл</span>
+              </label>
+            </div>
 
-          <div  class="panel-form__label">
-            <span class="panel-form__text">Иконка</span>
-            <textarea type="text" class="panel-form__case" name="file-icon" placeholder="Введите svg код"></textarea>
+            <p class="panel-form__upload-text">
+              Файл в формате .fig, .docx, .pptx, .pdf, .xls размером не
+              более 2 Мб
+            </p>
+            <div
+              class="panel-form__upload-areas panel-form__progress-area"
+            ></div>
+            <div
+              class="panel-form__upload-areas panel-form__uploaded-area"
+            ></div>
           </div>
         </div>
-        <button class="panel-form__button" type="button">Отправить</button>
+        <button class="panel-form__button" type="button" id="projects-submit">
+          Отправить
+        </button>
       </form>
     </div>
     <div class="modal-panel" data-modal="application">
@@ -377,5 +526,6 @@
     ></button>
     <script src="js/panel.min.js"></script>
     <script src="js/services.min.js"></script>
+    <script src="js/projects.min.js"></script>
   </body>
 </html>

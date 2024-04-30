@@ -135,7 +135,7 @@ table {
 html,
 body {
     height: 100%;
-
+    font-family: "Helvetica", serif;
     scroll-behavior: smooth;
     position: relative;
 
@@ -157,7 +157,7 @@ body {
     }
 }
 body {
-    font-family: "Helvetica", serif;
+  
     &.menu-active {
         overflow: hidden;
     }

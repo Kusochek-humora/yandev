@@ -18,9 +18,10 @@ document.addEventListener('DOMContentLoaded', function () {
             tabsContents.forEach(content => content.classList.remove('active'));
             tabsTrigger.forEach(tab => tab.classList.remove('active'));
             target.classList.add('active');
-            document.querySelector(`[data-content="${target.dataset.tab}"]`).classList.add('active');
+            const contentToShow = document.querySelector(`[data-content="${target.dataset.tab}"]`);
+            contentToShow.classList.add('active');
             localStorage.setItem('activeTab', target.dataset.tab);
-        }
+        };
     };
     tabsWrapper.addEventListener('click', tabHandler);
 
@@ -30,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
     buttonModalClose.forEach(btn => {
         btn.addEventListener('click', modalClose);
 
-    })
+    });
     function showModal(modal_name) {
         modals.forEach(modal => modal.classList.remove('active'));
         document.querySelector(`[data-modal="${modal_name}"]`).classList.add('active');
