@@ -61,16 +61,33 @@ document.addEventListener('DOMContentLoaded', function () {
         };
     };
 
-
+    fetch('https://yanessa-dev.lol/api/projects', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          // Другие необходимые заголовки могут быть добавлены здесь
+        },
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Разбор JSON-данных
+      })
+      .then(data => {
+        // Обработка полученных данных
+        console.log(data);
+      })
+      .catch(error => {
+        // Обработка ошибок
+        console.error('There was a problem with the fetch operation:', error);
+      });
 
     async function postProject(url, formData) {
         try {
-            const response = await fetch(url, {
+            const response = await fetch('https://yanessa-dev.lol/api/project/create', {
                 method: 'POST',
                 body: formData, // Отправляем объект FormDat
-                headers: {
-                    'Access-Control-Allow-Origin': 'http://localhost:3000/'
-                  }
             });
 
             if (!response.ok) {
