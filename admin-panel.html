@@ -175,15 +175,86 @@
           </div>
         </section>
         <section
-          id="portfolio-block"
+          id="application-block"
           data-content="application"
           class="panel__item"
-        ></section>
-        <section
-          data-content="main"
-          class="panel__item"
-          id="main-block"
-        ></section>
+        >
+          <h2 class="panel__title">Заявки</h2>
+          <div class="panel__main apps">
+            <div class="panel__main-top">
+              <p class="panel__caption-title" data-application-length></p>
+            </div>
+            <div class="panel__main-content apps">
+              <div class="applications" data-application-wrapper></div>
+            </div>
+          </div>
+        </section>
+        <section data-content="main" class="panel__item" id="main-block">
+          <h2 class="panel__title">Промо</h2>
+          <div class="panel__main">
+            <div class="panel__main-top">
+              <p class="panel__caption-title" data-promo-length>Фото</p>
+            </div>
+            <div class="panel__main-content blog">
+              <div class="blog__pictures">
+                <label class="blog__picutre">
+                  <img class="blog__image" src="" alt="image" />
+                  <div class="blog__wrapper-text">
+                    <p>
+                      <img id="img-1" src="uploads/file.svg" alt="icon" />
+                      Загрузить фото
+                    </p>
+                    <p>Файл в формате .png не более 2 мБ</p>
+                  </div>
+                  <input
+                    class="blog__some-file"
+                    type="file"
+                    hidden
+                    data-blog-photo="photo[]"
+                  />
+                </label>
+                <label class="blog__picutre">
+                  <img class="blog__image" src="" alt="image" />
+                  <div class="blog__wrapper-text">
+                    <p>
+                      <img id="img-2" src="uploads/file.svg" alt="icon" />
+                      Загрузить фото
+                    </p>
+                    <p>Файл в формате .png не более 2 мБ</p>
+                  </div>
+                  <input
+                    class="blog__some-file"
+                    type="file"
+                    hidden
+                    data-blog-photo="photo[]"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="panel__main second">
+            <div class="panel__main-top">
+              <p class="panel__caption-title" data-promo-length>Файл CV</p>
+            </div>
+            <div class="panel__main-content blog">
+              <label class="blog__cv">
+                <div>
+                  <img id="cv" src="uploads/file.svg" alt="icon" /> Выбрать файл
+                </div>
+
+                <input
+                  class="blog__some-file"
+                  type="file"
+                  name="file_CV"
+                  hidden
+                  data-blog-cv="1"
+                />
+              </label>
+            </div>
+
+            <button class="panel__caption-add blog-submit" type="button"><span>Обновить</span></button>
+          </div>
+        </section>
       </div>
     </main>
     <div class="modal-panel" data-modal="main">
@@ -299,43 +370,41 @@
               placeholder="Введите название"
             />
           </label>
-          <!-- <div class="panel-form__checkboxes">
-            <span class="panel-form__text">
-              Категории
-            </span>
+          <div class="panel-form__checkboxes">
+            <span class="panel-form__text"> Категории </span>
             <div class="panel-form__checkboxes-items">
               <input
-              value="HTML/CSS верстка"
-              type="checkbox"
-              id="c-1"
-              name="tags"
-              hidden
-            />
-            <label class="panel-form__chechbox-title" for="c-1">
-              HTML/CSS верстка
-            </label>
-            <input
-              value="Веб-дизайн"
-              type="checkbox"
-              id="c-2"
-              name="tags"
-              hidden
-            />
-            <label class="panel-form__chechbox-title" for="c-2">
-              Веб-дизайн
-            </label>
-            <input
-              value="Фронтенд-разработка"
-              type="checkbox"
-              id="c-3"
-              name="tags"
-              hidden
-            />
-            <label class="panel-form__chechbox-title" for="c-3">
-              Фронтенд-разработка
-            </label>
+                value="HTML/CSS верстка"
+                type="checkbox"
+                id="c-1"
+                name="tags[]"
+                hidden
+              />
+              <label class="panel-form__checkbox-title" for="c-1">
+                HTML/CSS верстка
+              </label>
+              <input
+                value="Веб-дизайн"
+                type="checkbox"
+                id="c-2"
+                name="tags[]"
+                hidden
+              />
+              <label class="panel-form__checkbox-title" for="c-2">
+                Веб-дизайн
+              </label>
+              <input
+                value="Фронтенд-разработка"
+                type="checkbox"
+                id="c-3"
+                name="tags[]"
+                hidden
+              />
+              <label class="panel-form__checkbox-title" for="c-3">
+                Фронтенд-разработка
+              </label>
             </div>
-          </div> -->
+          </div>
           <div class="panel-form__upload">
             <div class="panel-form__upload-box">
               <input type="file" id="fileInput" hidden name="file_cover" />
@@ -401,9 +470,10 @@
       type="button"
       id="overlay"
     ></button>
-
-    <script src="js/panel.min.js?=1714648497850"></script>
-    <script src="js/services.min.js?=1714648497850"></script>
-    <script src="js/projects.min.js?=1714648497850"></script>
+    <script src="js/promo.min.js?=1714718296452"></script>
+    <script src="js/panel.min.js?=1714718296452"></script>
+    <script src="js/services.min.js?=1714718296452"></script>
+    <script src="js/applications.min.js?=1714718296452"></script>
+    <script src="js/projects.min.js?=1714718296452"></script>
   </body>
 </html>
