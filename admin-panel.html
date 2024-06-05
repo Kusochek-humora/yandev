@@ -207,10 +207,10 @@
                     <p>Файл в формате .png не более 2 мБ</p>
                   </div>
                   <input
-                    class="blog__some-file"
+                    class="blog__some-file blog-ipt"
                     type="file"
                     hidden
-                    data-blog-photo="photo[]"
+                    data-blog="photos[]"
                   />
                 </label>
                 <label class="blog__picutre">
@@ -223,10 +223,10 @@
                     <p>Файл в формате .png не более 2 мБ</p>
                   </div>
                   <input
-                    class="blog__some-file"
+                    class="blog__some-file blog-ipt"
                     type="file"
                     hidden
-                    data-blog-photo="photo[]"
+                    data-blog="photos[]"
                   />
                 </label>
               </div>
@@ -236,23 +236,26 @@
             <div class="panel__main-top">
               <p class="panel__caption-title" data-promo-length>Файл CV</p>
             </div>
+            <a href="#" class="panel__cv-meta" target="_blank">Актуальное резюме скачать.</a>
             <div class="panel__main-content blog">
-              <label class="blog__cv">
+              <label class="blog__cv" style="cursor: pointer;">
                 <div>
                   <img id="cv" src="uploads/file.svg" alt="icon" /> Выбрать файл
                 </div>
 
                 <input
-                  class="blog__some-file"
+                  class="blog__some-file blog-ipt"
                   type="file"
                   name="file_CV"
                   hidden
-                  data-blog-cv="1"
+                  data-blog="file_CV"
                 />
               </label>
             </div>
 
-            <button class="panel__caption-add blog-submit" type="button"><span>Обновить</span></button>
+            <button class="panel__caption-add blog-submit" type="button">
+              <span>Обновить</span>
+            </button>
           </div>
         </section>
       </div>
@@ -290,7 +293,6 @@
           <div class="panel-form__label">
             <span class="panel-form__text">Описание</span>
             <textarea
-              type="text"
               class="panel-form__case"
               name="description"
               placeholder="Введите текст"
@@ -300,7 +302,6 @@
           <div class="panel-form__label">
             <span class="panel-form__text">Иконка</span>
             <textarea
-              type="text"
               class="panel-form__case"
               name="file_icon"
               placeholder="Введите svg код"
@@ -470,10 +471,10 @@
       type="button"
       id="overlay"
     ></button>
-    <script src="js/promo.min.js?=1714718296452"></script>
-    <script src="js/panel.min.js?=1714718296452"></script>
-    <script src="js/services.min.js?=1714718296452"></script>
-    <script src="js/applications.min.js?=1714718296452"></script>
-    <script src="js/projects.min.js?=1714718296452"></script>
+    <script src="js/promo.min.js?=1717631659001"></script>
+    <script src="js/panel.min.js?=1717631659001"></script>
+    <script src="js/services.min.js?=1717631659001"></script>
+    <script src="js/applications.min.js?=1717631659001"></script>
+    <script src="js/projects.min.js?=1717631659001"></script>
   </body>
 </html>
