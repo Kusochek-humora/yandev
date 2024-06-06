@@ -19,7 +19,7 @@
   <body class="wrapper" style="background-color: #1f1f1f">
     <header class="header" id="header">
     <nav class="header__nav container">
-        <a href="#" class="header__logo logo">
+        <a data-href="#header" class="header__logo logo anchors-link">
             <svg xmlns="http://www.w3.org/2000/svg" width="91" height="42" viewBox="0 0 91 42" fill="none">
                 <path
                     d="M30.2969 18.078L42.2907 0L66.5756 37.92L75.9243 23.832H78.5694L66.5756 41.91L42.2907 3.996L32.942 18.078H30.2969Z"
@@ -39,9 +39,9 @@
             <div class="shine"></div>
         </a>
         <ul class="header__list">
-            <li class="header__list-item"><a href="#" class="header__list-link">Портфолио</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">Услуги</a></li>
-            <li class="header__list-item"><a href="#" class="header__list-link">Контакты</a></li>
+            <li class="header__list-item"><a data-href="#portfolio" class="header__list-link anchors-link">Портфолио</a></li>
+            <li class="header__list-item"><a data-href="#services" class="header__list-link anchors-link">Услуги</a></li>
+            <li class="header__list-item"><a data-href="#contacts" class="header__list-link anchors-link">Контакты</a></li>
         </ul>
         <ul class="header__social">
 
@@ -103,8 +103,9 @@
 </header>
     <nav class="menu" id="menu">
       <div class="menu__box">
-        <a href="#" class="menu__logo logo">
+        <a data-href="#header" class="menu__logo logo anchors-link">
           <svg
+          style="pointer-events: none;"
             xmlns="http://www.w3.org/2000/svg"
             width="91"
             height="42"
@@ -155,13 +156,13 @@
 
       <ul class="menu__list">
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">Портфолио</a>
+          <a data-href="#portfolio" class="menu__list-link anchors-link">Портфолио</a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">Услуги</a>
+          <a data-href="#services" class="menu__list-link anchors-link">Услуги</a>
         </li>
         <li class="menu__list-item">
-          <a href="#" class="menu__list-link">Контакты</a>
+          <a data-href="#contacts" class="menu__list-link anchors-link">Контакты</a>
         </li>
       </ul>
       <ul class="menu__social">
@@ -246,7 +247,7 @@
               Есть проект или нужна помощь? Оставьте заявку для обсуждения
             </p>
             <div class="promo__buttons">
-              <button type="button" class="promo__button button border">
+              <a data-href="#contacts" class="promo__button button border anchors-link">
                 <span>Оставить заявку</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,7 +261,7 @@
                     fill="white"
                   />
                 </svg>
-              </button>
+              </a>
               <a href="#" class="promo__button button cv-link" download target="_blank">
                 <span>Резюме</span>
                 <svg
@@ -567,17 +568,17 @@
     <p class="footer__copyright">© Ян Эйрих. 2024</p>
   </div>
 </footer>
-    <script src="js/request.min.js?=1717631659001"></script>
-    <script src="js/vendor.min.js?=1717631659001"></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js?=1717631659001"></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js?=1717631659001"></script>
+    <script src="js/request.min.js?=1717632819041"></script>
+    <script src="js/vendor.min.js?=1717632819041"></script>
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js?=1717632819041"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js?=1717632819041"></script>
 
 <!-- Production -->
 <script src="https://unpkg.com/@popperjs/core@2"></script>
 <script src="https://unpkg.com/tippy.js@6"></script>
 
 
-<script src="js/main.min.js?=1717631659001"></script>
-<script src="js/forms.min.js?=1717631659001"></script>
+<script src="js/main.min.js?=1717632819041"></script>
+<script src="js/forms.min.js?=1717632819041"></script>
   </body>
 </html>
